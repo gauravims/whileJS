@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter any number" id="pri">
+    <button id="btn">check</button>
+    <div id="msg"></div>
+
+    <script>
+        function PrimeNumbet(){
+            var num = parseInt(document.getElementById("pri").value);
+            var msg =""
+            var i=2;
+            var b;
+            var c="true";
+            while(i<num){
+                b=num/i;
+                if(b=0){
+                    c="false";
+                }
+                i++;
+            }
+            if(c="false"){
+                msg = "Your number is not a prime number";
+            }
+            else{
+                msg = "Your number is a prime number";
+            }
+            document.getElementById("msg").innerHTML=msg
+        }
+        document.getElementById("btn").addEventListener("click",PrimeNumbet)
+    </script>
+</body>
+</html>
